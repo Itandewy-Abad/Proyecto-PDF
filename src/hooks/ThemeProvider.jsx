@@ -1,12 +1,22 @@
 import React, { createContext, useState } from 'react'
 
-const ThemeContext = createContext()
+export const ThemeContext = createContext()
 
-const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }) => {
   const [ darkMode, setDarkMode ] = useState( false )
+
+  const changeTheme = () => setDarkMode(!darkMode)
+
+  const valoresGlobales = {
+    darkMode,
+    changeTheme
+  }
+
   return (
-    <div>ThemeProvider</div>
+<ThemeContext.Provider value = { valoresGlobales }>
+  { children }
+</ThemeContext.Provider>
   )
 }
 
-export default ThemeProvider
+// export default ThemeProvider // Se quita esta línea porque arriba ya tenemos el export

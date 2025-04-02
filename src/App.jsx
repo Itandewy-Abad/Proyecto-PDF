@@ -1,8 +1,16 @@
 import React from 'react'
+import { ThemeProvider } from './hooks/ThemeProvider'
+import Title from './components/Title'
+import ButtonTheme from './components/ButtonTheme'
 
-const App = () => {
+export const App = () => {
   return (
-    <div>App</div>
+    <ThemeProvider>
+      <div className='container'>
+        <Title/>
+        <ButtonTheme/>
+      </div>
+    </ThemeProvider>
   )
 }
 
