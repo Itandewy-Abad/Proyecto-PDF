@@ -11,7 +11,7 @@ const useProducts = ()=>{
     return products
 }
 
-export default UseProducts
+export default useProducts
 
 // Vamos a crear una interfaz, ya sea en una tabla, en componentes (cards), etc.
 // del context jalamos todo, las categorías
